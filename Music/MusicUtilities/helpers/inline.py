@@ -292,67 +292,6 @@ def start_pannel():
         return f"🎛  **This is {BOT_NAME}**", buttons
 
 
-def private_panel():
-    if not CHANNEL and not GROUP:
-        buttons = [
-            [
-                InlineKeyboardButton(
-                    "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs",
-                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                )
-            ],
-        ]
-        return f"🎛  **This is {BOT_NAME}**", buttons
-    if not CHANNEL and GROUP:
-        buttons = [
-            [
-                InlineKeyboardButton(
-                    "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴏs",
-                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="✨ sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"
-                ),
-            ],
-        ]
-        return f"🎛  **This is {BOT_NAME}*", buttons
-    if CHANNEL and not GROUP:
-        buttons = [
-            [
-                InlineKeyboardButton(
-                    "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs",
-                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="✨ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{GROUP}"
-                ),
-            ],
-        ]
-        return f"🎛  **This is {BOT_NAME}**", buttons
-    if CHANNEL and GROUP:
-        buttons = [
-            [
-                InlineKeyboardButton(
-                    "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs",
-                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="✨ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{CHANNEL}"
-                ),
-                InlineKeyboardButton(
-                    text="✨ sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"
-                ),
-            ],
-        ]
-        return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
-
-
 def setting_markup():
     buttons = [
         [
