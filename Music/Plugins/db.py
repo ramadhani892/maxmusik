@@ -8,8 +8,9 @@ from Music.MusicUtilities.tgcallsrun import ASS_ACC as USER
 
 @Client.on_message(filters.command("gcast") & filters.user(OWNER_ID) & ~filters.edited)
 async def gcast(_, message: Message):
-    sent=0
-    failed=0
+    sent = 0
+    failed = 0
+    chats = []
     if message.from_user.id not in OWNER_ID:
         return
     else:
